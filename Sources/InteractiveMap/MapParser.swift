@@ -40,12 +40,12 @@ public class MapParser : NSObject, XMLParserDelegate {
         
         
         // check if arg has .svg in its name, if not, add it.
-        if (fileName.contains(".svg")) {
+        if (fileName.contains(".txt")) {
             filePath = Bundle.main.path(forResource: fileName, ofType: nil)
         }
         
         else {
-            filePath = Bundle.main.path(forResource: fileName, ofType: "svg")
+            filePath = Bundle.main.path(forResource: fileName, ofType: "txt")
         }
         
         guard let filePath = filePath else {
